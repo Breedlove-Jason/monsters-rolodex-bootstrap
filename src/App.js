@@ -2,6 +2,7 @@ import './App.css';
 import {useState, useEffect} from 'react';
 // import {Card, Container} from 'react-bootstrap';
 import axios from 'axios';
+import CardList from "./components/card-list/card-list.component";
 
 function App() {
     const [monsters, setMonsters] = useState([]);
@@ -39,14 +40,15 @@ function App() {
         <div className="App container-md">
             <h1>Monsters Rolodex</h1>
 
-            <div className="input-group mb-3">
-                <input type={"search"} placeholder={"search monsters"} onChange={onSearchChange} />
+            <div className="input-group mb-3 search">
+                <input type={"search"} placeholder={"search monsters"} onChange={onSearchChange} className={""}/>
                 <button id="button-addon1" type="submit" className="btn btn-primary">Search</button>
             </div>
 
-            {filteredMonsters.map(
-                (users, id) => <h1 key={users.id}>{users.name}<br/>{users.email}</h1>
-            )}
+            {/*{filteredMonsters.map(*/}
+            {/*    (users, id) => <h1 key={users.id}>{users.name}<br/>{users.email}</h1>*/}
+            {/*)}*/}
+            <CardList monsters={filteredMonsters}/>
         </div>
     );
 }
