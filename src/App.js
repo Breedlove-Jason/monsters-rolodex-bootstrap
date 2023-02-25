@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 // import {Card, Container} from 'react-bootstrap';
 import axios from 'axios';
 import CardList from "./components/card-list/card-list.component";
+import SearchBox from "./components/search-box/search-box.component";
 
 function App() {
     const [monsters, setMonsters] = useState([]);
@@ -39,15 +40,7 @@ function App() {
     return (
         <div className="App container-md">
             <h1>Monsters Rolodex</h1>
-
-            <div className="input-group mb-3 search">
-                <input type={"search"} placeholder={"search monsters"} onChange={onSearchChange} className={""}/>
-                <button id="button-addon1" type="submit" className="btn btn-primary">Search</button>
-            </div>
-
-            {/*{filteredMonsters.map(*/}
-            {/*    (users, id) => <h1 key={users.id}>{users.name}<br/>{users.email}</h1>*/}
-            {/*)}*/}
+            <SearchBox onChangeHandler={onSearchChange} placeholder={'Search Monsters'} className={'search-box form-control border-0 bg-dark'}/>
             <CardList monsters={filteredMonsters}/>
         </div>
     );
