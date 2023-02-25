@@ -1,16 +1,12 @@
 import React from 'react';
+import Card from "../card/card.component";
+import './card-list.styles..css';
 
-const CardList = (props) => {
+const CardList = ({monsters}) => {
     return (
-        <div>
-            {props.monsters.map((monster, id) => (
-                <div className={'card text-white bg-primary mb-3 style=max-width: 18rem'} key={monster.id}>
-                    <div className={'card-header'}>Header</div>
-                    <div className={'card-body'}>
-                        <h5 className={'card-title'}>{monster.name}</h5>
-                        <p className={'card-text'}>{monster.email}</p>
-                    </div>
-                </div>
+        <div className={'card-list'} key={monsters.id}>
+            {monsters.map((monster) => (
+                <Card monster={monster} key={monster.id}/>
                     ))}
         </div>
     );

@@ -11,12 +11,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h2 {
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+.title-header{
+    font-size: 150px;
+    font-family: 'Bigelow Rules', cursive;
+    text-align: center;
 }
 
 

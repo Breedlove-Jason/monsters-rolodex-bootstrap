@@ -38,8 +38,8 @@ function App() {
     };
 
     return (
-        <div className="App container-md">
-            <h1>Monsters Rolodex</h1>
+        <div className="App container-lg">
+            <h1 className={'title-header'}>Monsters Rolodex</h1>
             <SearchBox onChangeHandler={onSearchChange} placeholder={'Search Monsters'}
                        className={'search-box form-control border-0 bg-dark'}/>
             <CardList monsters={filteredMonsters}/>
