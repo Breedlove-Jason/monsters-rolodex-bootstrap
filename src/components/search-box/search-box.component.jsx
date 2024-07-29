@@ -1,13 +1,16 @@
-import React from "react";
-import "./search-box.styles.css";
+import './search-box.styles.css';
 
-const SearchBoxComponent = (props) => {
-    return (
-        <div className="input-group mb-3 search text-white">
-            <input type={"search"} placeholder={props.placeholder} onChange={props.onChangeHandler}
-                   className={props.className}/>
-        </div>
-    );
+const SearchBox = ({ className, placeholder, onChangeHandler }) => {
+  return (
+    <div className={`search-container`}>
+      <input
+        className={`search-box form-control border-0 bg-dark`}
+        type="search"
+        placeholder={placeholder}
+        onChange={onChangeHandler}
+      />
+    </div>
+  );
 };
 
-export default SearchBoxComponent;
+export default SearchBox;

@@ -1,3 +1,13 @@
+/* src/App.css */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Adjust margin as needed */
+}
+
 .search-box {
-    color: white !important;
+  color: white !important;
+  width: 300px; /* Set a fixed width for the search box */
+  max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
 }
